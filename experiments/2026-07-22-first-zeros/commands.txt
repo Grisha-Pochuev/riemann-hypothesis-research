@@ -1,0 +1,4 @@
+python -m pip install -e .[dev]
+pytest
+python scripts/verify_zeros.py --start 1 --count 10 --dps 60 > experiments/2026-07-22-first-zeros/results.jsonl
+python scripts/zero_statistics.py --start 1 --count 10 --dps 60 > experiments/2026-07-22-first-zeros/statistics.json
